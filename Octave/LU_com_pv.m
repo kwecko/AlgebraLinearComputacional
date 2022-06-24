@@ -53,7 +53,10 @@ b = [ 60; 0; 0; 0; 0; 0; 0];
 %y=solveL(L,P*b);
 %x=solveUP(U,y)
 
+% LU com pivotamento; lu e uma funcao interna; Decompoem a matriz A
 y = L \ (P*b);
+
+% Calcula as matrizes decomposta; Metodo gauss
 x = U \ y
 
 % Tempo Total de execução
