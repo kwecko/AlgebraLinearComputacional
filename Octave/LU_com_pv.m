@@ -50,9 +50,11 @@ b = [ 60; 0; 0; 0; 0; 0; 0];
 % LU com pivotamento ; lu e uma funcao interna
 [L, U, P] = lu(A);
 
-y=solveL(L,P*b);
+%y=solveL(L,P*b);
+%x=solveUP(U,y)
 
-x=solveUP(U,y)
+y = L \ (P*b);
+x = U \ y
 
 % Tempo Total de execução
 printf('Tempo total de CPU: %f seconds\n', cputime-t);
